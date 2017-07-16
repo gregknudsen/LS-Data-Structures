@@ -5,17 +5,16 @@ class Stack {
   }
 
   add(element) {
+    console.log(this.size);
+    this.size += 1;
     return this.store.push(element);
-    // return this.store.size += 1;
   }
 
   remove() {
+    if (this.size > 0) {
+      this.size -= 1;
+    } else this.size = 0;
     return this.store.pop();
-    // return this.store.size -= 1;
-  }
-
-  size(store) {
-    return this.store.length;
   }
 }
 
